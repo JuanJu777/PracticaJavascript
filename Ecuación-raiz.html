@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function discrim(a,b,c) {
+
+    return(b*b*-4*a*c);
+    }
+
+    function solucionar(a,b,c,sol) {
+        let disc = discrim(a,b,c);
+        if(disc < 0)
+        alert("Sin solucion real");
+    else 
+    {
+        sol[0] = (-b + Math.sqrt(disc)) / (2*a);
+        sol[1] = (-b + Math.sqrt(disc)) / (2*a);
+    }
+    }
+ 
+</script>
+<body>
+    <p>La ecuacion es: </p>
+    <p>Ecuacion x2 - 8x + 12 = 0</p>
+
+    <script>
+        var soluc = new Array(2);
+        solucionar(1, -8, 12, soluc);
+        document.write("Soluciones" +soluc[0] +"y" +soluc[1]);
+    </script>
+</body>
+</html>
